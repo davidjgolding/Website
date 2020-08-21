@@ -1,13 +1,152 @@
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Helvetica Neue', 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 1000px;
+  /* min-height: 100vh; */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.card-deck{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 0px!important;
+  /* column-count: 2; */
+  /* max-width: 1000px; */
+  /* margin-left: auto;
+  margin-right: auto;
+  flex-direction: 'row'; */
+}
+
+.carousel {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 768px) {
+  .card-deck {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-slide {
+  margin: 100px;
+}
+
+.card {
+  border-radius: 0;
+  margin: 5px 5px !important;
+}
+
+.carousel-item {
+  transition: transform .4s ease-in-out !important;
+}
+
+@media (max-width: 768px) {
+  .carousel-inner {
+    margin: 5px 0px;
+  }
+  .project-slide {
+    margin: 0px;
+    margin-right: 5px;
+  }
+  .card-deck{
+    margin: 0px 5px;
+  }
+  .carousel-indicators,
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none
+  }
+  .carousel-item {
+    margin-right: auto;   
+    display: block;
+  }
+  .card {
+    margin: 4px 0px !important;
+  }
+  
+}
+
+.card-body {
+  padding: 15px;
+  /* background-color:#35363A;
+  color: white; */
+
+}
+
+.card-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-text {
+  margin: 0;
+}
+
+.cardContent {
+  padding: 20px 0;
+}
+
+.tag {
+  border: 1px solid;
+  border-radius: .25rem;
+  padding: 2px 5px;
+  margin: 0 .5rem 0 0;
+  /* padding: 0 .5rem; */
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon,
+.carousel-indicators {
+
+  filter: invert(1);
+
+}
+
+.carousel-control-next {
+  width: auto;
+  margin-right: 30px;
+}
+
+.carousel-control-prev {
+  width: auto;
+  margin-left: 30px;
+}
+
+@media (min-width: 768px) {
+  .carousel-itemz{
+    /* min-height: 100%; 
+    min-height: 100vh; */
+
+    display: flex;
+    align-items: center;
+  }
+
+  .carousel-inner{
+    /* min-height: 100%; 
+    min-height: 90vh; */
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Montserrat';
+  font-size:20px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 20px;
+  }
 }
