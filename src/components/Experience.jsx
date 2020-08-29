@@ -191,6 +191,7 @@ export default class ExperienceSlide extends Component {
             </div>
           </div>
         </div>
+
       </div>
     );
   }

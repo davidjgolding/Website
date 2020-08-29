@@ -170,6 +170,8 @@ export default class PortfolioSlide extends Component {
           max_cards={this.state.max_cards}
           slide={this.state.slide}
         />
+                  {/* <div style={{fontSize: "150px", margin: "0", padding: "0"}}><b>DEVELOPER.</b></div> */}
+
       </div>
     );
   }
