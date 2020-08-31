@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Card from "react-bootstrap/Card";
-import CardColumns from "react-bootstrap/CardColumns";
 import CardDeck from "react-bootstrap/CardDeck";
 import $ from "jquery";
-// import '../css/Portfolio.css';
-// import Button from 'react-bootstrap/Button'
-
-// import '../App.css'
-// import { render } from '@testing-library/react';
 
 const tag_colours = {
   Java: "#E66F00",
@@ -54,7 +48,7 @@ function ProjectCard(state) {
           </Card.Text>
         </div>
         <Card.Text>{project.sub}</Card.Text>
-        <Card.Text className="cardContent">{project.desc}</Card.Text>
+        <Card.Text className="card-content">{project.desc}</Card.Text>
         <div className="d-flex" style={{ padding: 0 }}>
           {tags(project)}
           {project.github ? (
@@ -98,13 +92,13 @@ function ProjectSlide(state) {
 function ControlledCarousel(state) {
   const contents = split(state.project, state.max_cards).map((projects, i) => (
     <Carousel.Item>
-      <ProjectSlide projects={projects} key={i}  />
+      <ProjectSlide projects={projects} key={i} />
     </Carousel.Item>
   ));
   return (
     <Carousel
       id="carousel"
-      className="carousel-itemz"
+      className="carousel-container"
       interval={null}
       controls={true}
       wrap={false}
@@ -135,10 +129,10 @@ export default class PortfolioSlide extends Component {
     if (dim > 10) {
       dim = 10;
     }
-    return dim
+    return dim;
   }
   updateDimensions() {
-    const dim = this.maxCards()
+    const dim = this.maxCards();
     if ($("#carousel div.active").index() > this.state.projects.length / dim) {
       this.setState({
         count: this.state.count + 1,
@@ -146,50 +140,42 @@ export default class PortfolioSlide extends Component {
       });
     }
     this.setState({ max_cards: dim });
-    console.log("set height to "+(dim/2) * 360)
     if (window.innerWidth >= 768) {
-      $("#carousel").height((dim/2) * 200)
+      // $(".projects-content").height((dim / 2) * 200);
+      $("#carousel").height((dim / 2) * 200);
     } else {
-      $("#carousel").css('height','auto')
+      // $(".projects-content").css("height", "auto");
+      $("#carousel").css("height", "auto");
     }
-    
-    console.log($(".projects-content"))
-    // $("#carousel").carousel(0)
   }
 
-  /**
-   * Add event listener
-   */
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener("resize", this.updateDimensions.bind(this));
   }
 
-  /**
-   * Remove event listener
-   */
   componentWillUnmount() {
     window.removeEventListener("resize", this.updateDimensions.bind(this));
   }
 
   render() {
-    // const contents = this.state.projects.map(project =>
-    //                 (<PortfolioTile project={project} />))
     return (
-      <section  id="projects" className="portfolio slide" >
+      <section id="projects" className="portfolio slide">
         <div className="projects-container">
-        <div className="slide-title">PROJECTS.</div>
-        <div className="projects-content" style={{width: "100%", maxWidth: "1200px"}}>
-        <ControlledCarousel
-          className="jumbotron vertical-center"
-          key={this.state.count}
-          
-          project={this.state.projects}
-          max_cards={this.state.max_cards}
-          slide={this.state.slide}
-        />
-      </div>
-      </div>
+          <div className="slide-title">PROJECTS.</div>
+          <div
+            className="projects-content"
+            style={{ width: "100%", maxWidth: "1200px" }}
+          >
+            <ControlledCarousel
+              className="jumbotron vertical-center"
+              key={this.state.count}
+              project={this.state.projects}
+              max_cards={this.state.max_cards}
+              slide={this.state.slide}
+            />
+          </div>
+        </div>
       </section>
     );
   }

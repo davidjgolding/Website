@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Site from './Site';
 import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'jquery/dist/jquery.min.js'
@@ -9,11 +9,7 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <head>
-      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-      </link>
-  </head> */}
-    <App />
+    <Site />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -13,7 +13,7 @@ class ExperienceBody extends Component {
       description: this.props.description,
       logo: this.props.logo,
       lastCard: this.props.lastCard,
-      buttonActive: false
+      buttonActive: false,
     };
     this.expand = this.expand.bind(this);
   }
@@ -30,17 +30,13 @@ class ExperienceBody extends Component {
   render() {
     const prefix = "experience-";
     const body = (entity) => prefix + entity.replace(/\s+/g, "") + "-body";
-    //className="experience-card-body-vertical-align"
-    var className =  "text-black experience-card-contents "
+    var className = "text-black experience-card-contents ";
     if (this.lastCard) {
-      className += "last-card"
+      className += "last-card";
     }
     return (
       <Tab.Pane className="tab-pane" eventKey={prefix + this.state.entity}>
-        <Card
-          className={ className } 
-          // style={{ border: "none" }}
-        >
+        <Card className={className}>
           <Card.Body className="experience-card-body">
             <div class={"experience-anchor-button"}>
               <AnchorLink
@@ -87,7 +83,9 @@ class ExperienceBody extends Component {
                       >
                         <path
                           fill-rule="evenodd"
-                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+                          d="M1.646 4.646a.5.5 0 0 1 .708 0L8 
+                          10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 
+                          0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
                         />
                       </svg>
                     </div>
@@ -118,35 +116,6 @@ export default class ExperienceSlide extends Component {
     };
   }
 
-  updateDimensions() {
-    // console.log("HEIGHT " + $("#list-group-tabs-example").style.height)
-    // console.log("A: "+$(".list-group").height())
-    // console.log("B: "+$(".tab-content").height())
-    // if ($(".tab-content").height() != $(".list-group").height()) {
-    // $(".list-group").height($(".tab-content").height())
-    // }
-    // console.log("A: "+$(".list-group").height())
-    // console.log("B: "+$(".tab-content").height())
-    // } else {
-    //     $(".list-group").height($(".col-sm-4").height())
-    // }
-    // $(".list-group").height($(".tab-content").height())
-  }
-
-  /**
-   * Add event listener
-   */
-  componentDidMount() {
-    this.updateDimensions();
-    window.addEventListener("resize", this.updateDimensions.bind(this));
-  }
-
-  /**
-   * Remove event listener
-   */
-  componentWillUnmount() {
-    window.removeEventListener("resize", this.updateDimensions.bind(this));
-  }
 
   render() {
     const prefix = "experience-";
@@ -164,7 +133,7 @@ export default class ExperienceSlide extends Component {
               </Card.Body>
             </Card>
           </ListGroup.Item>
-        )
+        );
         acc[1].push(
           <ExperienceBody
             entity={item.entity}
@@ -172,7 +141,7 @@ export default class ExperienceSlide extends Component {
             location={item.location}
             description={item.description}
             logo={item.logo}
-            lastCard={i==(this.state.data.length-1)}
+            lastCard={i == this.state.data.length - 1}
           />
         );
         return acc;
@@ -180,27 +149,27 @@ export default class ExperienceSlide extends Component {
       [[], []]
     );
     return (
-        <section id="experience" className="experience slide">
-          <div className="experience-container">
-            <div className="slide-title">EXPERIENCE.</div>
-            <div>
-              <div className="experience-contents">
-                <div className="experience-contents-cards">
-                  <Tab.Container
-                    id="list-group-tabs-example"
-                    defaultActiveKey={prefix + this.state.data[0].entity}
-                  >
-                    <Col sm={4}>
-                      <ListGroup>{sp[0]}</ListGroup>
-                    </Col>
-                    <Col sm={8}>
-                      <Tab.Content>{sp[1]}</Tab.Content>
-                    </Col>
-                  </Tab.Container>
-                </div>
+      <section id="experience" className="experience slide">
+        <div className="experience-container">
+          <div className="slide-title">EXPERIENCE.</div>
+          <div>
+            <div className="experience-contents">
+              <div className="experience-contents-cards">
+                <Tab.Container
+                  id="list-group-tabs-example"
+                  defaultActiveKey={prefix + this.state.data[0].entity}
+                >
+                  <Col sm={4}>
+                    <ListGroup>{sp[0]}</ListGroup>
+                  </Col>
+                  <Col sm={8}>
+                    <Tab.Content>{sp[1]}</Tab.Content>
+                  </Col>
+                </Tab.Container>
               </div>
             </div>
           </div>
+        </div>
       </section>
     );
   }
