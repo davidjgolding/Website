@@ -9,10 +9,10 @@ import './index.css';
 
 ReactDOM.render(
   <React.StrictMode>
-    <head>
+    {/* <head>
       <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
       </link>
-  </head>
+  </head> */}
     <App />
   </React.StrictMode>,
   document.getElementById('root')

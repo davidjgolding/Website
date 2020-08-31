@@ -37,7 +37,7 @@ export default function ContactSlide(props) {
     "contact-logos"
   );
   return (
-    <div id="welcome" className="welcome">
+    <section id="welcome" className="welcome slide">
       <div className="welcome-inner">
         <div className="welcome-statement"> 
           <h2>STUDENT.</h2>
@@ -77,7 +77,11 @@ export default function ContactSlide(props) {
                 You’ll normally find me playing with {python} or {kotlin}{" "}
                 sometimes with the help of {docker} and {azure}.
               </p>
-
+              <p>
+                I ❤️ building things which help people and ensuring they’re 🔒.
+                You’ll normally find me playing with {python} or {kotlin}{" "}
+                sometimes with the help of {docker} and {azure}.
+              </p>
               <p >
                 I’m always open to new opportunities so please reach out
                 😁.
@@ -91,6 +95,6 @@ export default function ContactSlide(props) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

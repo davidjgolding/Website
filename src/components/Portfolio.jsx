@@ -126,12 +126,19 @@ export default class PortfolioSlide extends Component {
     };
   }
 
-  updateDimensions() {
-    var dim = Math.round(window.innerHeight / 290) * 2;
+  maxCards() {
+    var dim = Math.round(window.innerHeight / 300) * 2;
     console.log("MXC ", dim);
     if (dim < 2) {
       dim = 2;
     }
+    if (dim > 10) {
+      dim = 10;
+    }
+    return dim
+  }
+  updateDimensions() {
+    const dim = this.maxCards()
     if ($("#carousel div.active").index() > this.state.projects.length / dim) {
       this.setState({
         count: this.state.count + 1,
@@ -139,6 +146,14 @@ export default class PortfolioSlide extends Component {
       });
     }
     this.setState({ max_cards: dim });
+    console.log("set height to "+(dim/2) * 360)
+    if (window.innerWidth >= 768) {
+      $("#carousel").height((dim/2) * 200)
+    } else {
+      $("#carousel").css('height','auto')
+    }
+    
+    console.log($(".projects-content"))
     // $("#carousel").carousel(0)
   }
 
@@ -161,7 +176,10 @@ export default class PortfolioSlide extends Component {
     // const contents = this.state.projects.map(project =>
     //                 (<PortfolioTile project={project} />))
     return (
-      <div  id="projects" className="portfolio">
+      <section  id="projects" className="portfolio slide" >
+        <div className="projects-container">
+        <div className="slide-title">PROJECTS.</div>
+        <div className="projects-content" style={{width: "100%", maxWidth: "1200px"}}>
         <ControlledCarousel
           className="jumbotron vertical-center"
           key={this.state.count}
@@ -170,11 +188,9 @@ export default class PortfolioSlide extends Component {
           max_cards={this.state.max_cards}
           slide={this.state.slide}
         />
-                  {/* <div style={{fontSize: "150px", margin: "0", padding: "0"}}><b>DEVELOPER.</b></div> */}
-
       </div>
+      </div>
+      </section>
     );
   }
 }
-
-// style={{ minHeight: "95vh" }}
