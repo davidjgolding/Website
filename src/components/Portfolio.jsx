@@ -39,17 +39,18 @@ function tags(project) {
 function ProjectCard(state) {
   const project = state.project;
   return (
-    <Card className="text-black" style={{ border: "none" }}>
+    <Card className="text-black project-card" style={{ border: "none" }}>
       <Card.Body>
         <div className="d-flex justify-content-between">
           <Card.Title>{project.head} </Card.Title>
-          <Card.Text style={{ color: "grey", margin: 0, padding: 0 }}>
+          <Card.Text style={{color: "grey", marginLeft: 5, padding: 0, textAlign: "right", whiteSpace: "nowrap", fontStyle: "italic"}}>
             {parseDate(project.date)}
           </Card.Text>
         </div>
-        <Card.Text>{project.sub}</Card.Text>
+        <Card.Text style={{color: "grey"}}>{project.sub}</Card.Text>
         <Card.Text className="card-content">{project.desc}</Card.Text>
-        <div className="d-flex" style={{ padding: 0 }}>
+        <div className="tag-container" style={{ padding: 0 }}>
+          <div className="d-flex" style={{padding: "1.25rem"}}>
           {tags(project)}
           {project.github ? (
             <div className="ml-auto " style={{ margin: 0 }}>
@@ -62,6 +63,7 @@ function ProjectCard(state) {
               </Card.Link>
             </div>
           ) : null}
+        </div>
         </div>
       </Card.Body>
     </Card>
@@ -78,75 +80,118 @@ function split(arr, size) {
   return res;
 }
 
+class CustomCarousel extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      projects: props.project,
+      max_cards: props.max_cards,
+      current: 0,
+    };
+    this.changeSlide = this.changeSlide.bind(this);
+  }
+
+  changeSlide(i) {
+    this.setState({ current: this.state.current + i });
+  }
+
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      max_cards: nextProps.max_cards,
+      current:
+        nextProps.current == null ? this.state.current : nextProps.current,
+    });
+  }
+
+  render() {
+    const slides = split(this.state.projects, this.state.max_cards);
+    if (this.state.current > slides.length - 1) {
+      this.setState({ current: slides.length - 1 });
+    }
+    return (
+      <div className="s-container">
+        <a
+          className={
+            "carousel-control-prev " +
+            (this.state.current <= 0 ? "make-hidden" : "make-visible")
+          }
+          role="button"
+          onClick={() => this.changeSlide(-1)}
+        >
+          <span aria-hidden="true" class="carousel-control-prev-icon"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <div className="s-container">
+          {slides.map((projects, i) => (
+            <ProjectSlide
+              className={
+                "slide-defaults " +
+                (i == this.state.current ? "make-visible " : "") +
+                (i == this.state.current - 1 ? "prev-slide " : "") +
+                (i == this.state.current + 1 ? "next-slide " : "")
+              }
+              projects={projects}
+              key={i}
+            />
+          ))}
+        </div>
+        <a
+          className={
+            "carousel-control-next " +
+            (this.state.current >= slides.length - 1
+              ? "make-hidden"
+              : "make-visible")
+          }
+          role="button"
+          onClick={() => this.changeSlide(1)}
+        >
+          <span aria-hidden="true" class="carousel-control-next-icon"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    );
+  }
+}
+
 function ProjectSlide(state) {
-  const contents = state.projects.map((project) => (
+  var contents = state.projects.map((project) => (
     <ProjectCard project={project} key={project.head} />
   ));
+
   return (
-    <div className="project-slide">
-      <CardDeck>{contents}</CardDeck>
+    <div className="project-slide" className={state.className}>
+      <div className="card-deck">{contents}</div>
     </div>
   );
 }
 
-function ControlledCarousel(state) {
-  const contents = split(state.project, state.max_cards).map((projects, i) => (
-    <Carousel.Item>
-      <ProjectSlide projects={projects} key={i} />
-    </Carousel.Item>
-  ));
-  return (
-    <Carousel
-      id="carousel"
-      className="carousel-container"
-      interval={null}
-      controls={true}
-      wrap={false}
-      touch={false}
-      defaultActiveIndex={state.slide}
-    >
-      {contents}
-    </Carousel>
-  );
-}
 export default class PortfolioSlide extends Component {
   constructor(props) {
     super(props);
     this.state = {
       projects: props.projects,
-      max_cards: 8,
+      max_cards: max_cards,
       count: 0,
-      slide: 0,
     };
   }
 
   maxCards() {
-    var dim = Math.round(window.innerHeight / 300) * 2;
-    console.log("MXC ", dim);
+    var dim = Math.round(window.innerHeight / 350) * 2;
     if (dim < 2) {
       dim = 2;
     }
     if (dim > 10) {
       dim = 10;
     }
+    if (window.innerWidth < 1000) {
+      dim = dim / 2;
+    }
     return dim;
   }
   updateDimensions() {
     const dim = this.maxCards();
-    if ($("#carousel div.active").index() > this.state.projects.length / dim) {
-      this.setState({
-        count: this.state.count + 1,
-        slide: Math.floor(this.state.projects.length / dim),
-      });
-    }
     this.setState({ max_cards: dim });
-    if (window.innerWidth >= 768) {
-      // $(".projects-content").height((dim / 2) * 200);
-      $("#carousel").height((dim / 2) * 200);
-    } else {
-      // $(".projects-content").css("height", "auto");
-      $("#carousel").css("height", "auto");
-    }
   }
 
   componentDidMount() {
@@ -165,14 +210,13 @@ export default class PortfolioSlide extends Component {
           <div className="slide-title">PROJECTS.</div>
           <div
             className="projects-content"
-            style={{ width: "100%", maxWidth: "1200px" }}
+            style={{ width: "100%", maxWidth: "1200px", overflow: "hidden" }}
           >
-            <ControlledCarousel
+            <CustomCarousel
               className="jumbotron vertical-center"
-              key={this.state.count}
               project={this.state.projects}
               max_cards={this.state.max_cards}
-              slide={this.state.slide}
+              current={this.state.current}
             />
           </div>
         </div>

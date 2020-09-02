@@ -58,7 +58,6 @@ export default class App extends Component {
 
   scroll() {
     const experience = $(window).scrollTop() - $("#experience").offset().top;
-    console.log(experience);
     if (experience < -600 || $(window).scrollTop() < 200) {
       $("#nav-experience").blur();
       $("#nav-projects").blur();
@@ -94,7 +93,7 @@ export default class App extends Component {
             {this.navItem(
               "nav-home",
               "navbar-brand",
-              "#root",
+              "#home",
               <h1 style={{ marginTop: "auto" }}>DAVID GOLDING</h1>
             )}
             <Navbar.Toggle

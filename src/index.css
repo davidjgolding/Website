@@ -50,9 +50,27 @@ code {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
   .card-deck {
     grid-template-columns: 1fr;
+  }
+
+  .welcome-statement {
+    display: block;
+  }
+
+  .welcome-inner {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .welcome-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-deck {
     margin: 0;
   }
 
@@ -82,6 +100,7 @@ code {
 
 .card-content {
   padding: 20px 0;
+  padding-bottom: 40px;
 }
 
 .tag {
@@ -103,6 +122,7 @@ code {
 
 .experience-contents-cards {
   display: flex;
+  flex-flow: row;
   max-width: 1000px;
   margin: 10px 20px 0px 80px;
 }
@@ -113,16 +133,18 @@ code {
   max-width: 280px;
   z-index: 1;
   background-color: white;
+  flex: 0 1 auto;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  display: none;
+  position: relative;
+  margin: 0 30px;
 }
 
 @media (min-width: 769px) {
   .experience-contents-cards {
     margin: 0 20px;
-  }
-
-  .carousel-container {
-    display: flex;
-    align-items: center;
   }
 
   .carousel-inner {
@@ -133,16 +155,16 @@ code {
   }
 
   .col-sm-4 {
-    max-height: 70vh;
     overflow-y: scroll;
-    height: 650px;
-    min-height: 300px;
   }
 
   .experience-card-contents {
-    height: 650px;
-    max-height: 70vh;
-    min-height: 300px;
+    min-height: 650px;
+  }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    display: block;
   }
 }
 
@@ -234,7 +256,6 @@ a:focus {
 
 .experience-card-text {
   margin: 20px 2px;
-  overflow-y: scroll;
 }
 
 .list-group {
@@ -713,24 +734,71 @@ h2 {
   font-weight: normal;
 }
 
-/* 
-.slide-container {
-  overflow: scroll;
-  height: 95vh; 
-  scroll-snap-type: mandatory;
-  scroll-snap-points-y: repeat(95vh);
-  scroll-snap-type: y mandatory; 
-}
-
-.body-container {
-  overflow: hidden;
-}
-
-section {
-  scroll-snap-align: start;
+.slide-defaults {
   position: relative;
+  display: block;
+  width: 100%;
+  margin-right: -100%;
+  backface-visibility: hidden;
 }
 
-.footer {
-  scroll-snap-align: end;
-} */
+.make-hidden {
+  visibility: hidden;
+}
+
+@media (min-width: 769px) {
+  .s-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .prev-slide {
+    visibility: hidden;
+    transform: translateX(-100%);
+  }
+
+  .next-slide {
+    visibility: hidden;
+    transform: translateX(100%);
+  }
+
+  .make-hidden {
+    visibility: hidden;
+  }
+  .slide-defaults {
+    transition: transform 0.4s ease-in-out;
+    visibility: hidden;
+  }
+
+  .make-visible {
+    visibility: visible;
+  }
+}
+@media (min-width: 769px) and (max-width: 1000px) {
+  .welcome-statement {
+    display:  block;
+  }
+  
+  .welcome-inner {
+    display: block;
+    max-width: 680px;
+  }
+  .welcome-card {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h2 {
+    font-size: 1rem;
+    text-align: right;
+    line-height: 0.7em;
+  }
+}
+
+.tag-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%
+}

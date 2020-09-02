@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Tab, Row, Col, ListGroup, Card } from "react-bootstrap";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import $ from "jquery";
-
+import ResizeSensor from "css-element-queries/src/ResizeSensor";
 class ExperienceBody extends Component {
   constructor(props) {
     super(props);
@@ -19,11 +19,7 @@ class ExperienceBody extends Component {
   }
 
   expand() {
-    if ($(".tab-content").height() != $(".list-group").height()) {
-      $(".list-group").height($(".tab-content").height());
-    }
     const active = this.state.buttonActive;
-    console.log(active);
     this.setState({ buttonActive: !active });
   }
 
@@ -94,7 +90,7 @@ class ExperienceBody extends Component {
               </AnchorLink>
             </div>
             <Card.Text
-              className="experience-card-text collapse"
+              className="experience-card-text collapse "
               id={body(this.state.entity)}
             >
               {this.state.description.map((par) => (
@@ -116,6 +112,11 @@ export default class ExperienceSlide extends Component {
     };
   }
 
+  componentDidMount() {
+    new ResizeSensor($(".tab-content"), function () {
+      $(".col-sm-4").height($(".tab-content").height());
+    });
+  }
 
   render() {
     const prefix = "experience-";
@@ -124,6 +125,7 @@ export default class ExperienceSlide extends Component {
         acc[0].push(
           <ListGroup.Item action eventKey={prefix + item.entity}>
             <Card
+              id={"experience-card-" + i}
               className="text-black experience-card"
               style={{ border: "none" }}
             >
