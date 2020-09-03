@@ -1,0 +1,171 @@
+[
+  {
+    "head": "Website v2",
+    "sub": "Fresh, new design",
+    "desc": "Complete rewrite of my website: improving the design, cross-compatability and ease of maintenance.",
+    "date": "01 Sep 2020",
+    "category": "Personal",
+    "skills": ["JavaScript", "React"],
+    "github": "https://github.com/davidjgolding/Website"
+  },
+  {
+    "head": "CordShips",
+    "sub": "R3 Hackathon",
+    "desc": "Distributed battleships game running on Corda for R3's Engineer Hackathon which won best overall.",
+    "date": "18 Aug 2020",
+    "category": "Work",
+    "skills": ["Kotlin", "React", "Corda"],
+    "github": "https://github.com/davidjgolding/CordShips"
+  },
+  {
+    "head": "Resolution Refutation Prover",
+    "sub": "CS262",
+    "desc": "Determined whether a given formula was a tautology using proof by refutiation with the resolution rule.",
+    "date": "05 May 2020",
+    "category": "Uni",
+    "skills": ["Prolog", "PlUnit"]
+  },
+  {
+    "head": "PLM Evaluator",
+    "sub": "CS259",
+    "desc": "Parsed and evaluated PLM (Programming Language of the Moment) which allowed for assignments and functions.",
+    "date": "05 May 2020",
+    "category": "Uni",
+    "skills": ["JavaCC", "JUnit", "Gradle"]
+  },
+  {
+    "head": "Derivative Trade Manager",
+    "sub": "CS261",
+    "desc": "Group project sponsored by Deutsche Bank to create an intelligent real-time derivative trade manager.",
+    "date": "11 Mar 2020",
+    "category": "Uni",
+    "skills": ["Python", "Django", "REST", "Docker"],
+    "github": "https://github.com/davidjgolding/Group23-Backend"
+  },
+  {
+    "head": "Energy Wastage Tracker",
+    "sub": "Hack Cambridge 2020",
+    "desc": "Intelligently tracks a rooms energy wastage based on the rooms activity.",
+    "date": "14 Jan 2020",
+    "category": "Personal",
+    "skills": ["Python", "PHP", "AWS"],
+    "github": "https://github.com/davidjgolding/hackcambridge2020"
+  },
+  {
+    "head": "Timetabling",
+    "sub": "CS255",
+    "desc": "Generated a valid timetable given a set of constraints and values using backtracking search with heuristics.",
+    "date": "14 Jan 2020",
+    "category": "Uni",
+    "skills": ["Python"]
+  },
+  {
+    "head": "Wondough Bank",
+    "sub": "CS263",
+    "desc": "Fixed vulnerabilities in a dummy banking site including with OAuth and introduced reCAPTCHA.",
+    "date": "09 Dec 2019",
+    "category": "Uni",
+    "skills": ["Java", "JUnit", "Gradle", "Python", "unittest"]
+  },
+  {
+    "head": "Department Store Stock Manager",
+    "sub": "CS258",
+    "desc": "Implemented fuctionality to return the required data using features such as stored procedures and views.",
+    "date": "06 Dec 2019",
+    "category": "Uni",
+    "skills": ["Java", "JDBC", "Oracle SQL"]
+  },
+  {
+    "head": "Intrusion Detection System",
+    "sub": "CS241",
+    "desc": "Mutithreaded primitive firewall which monitored traffic to detect a variety of different attacks.",
+    "date": "25 Nov 2019",
+    "category": "Uni",
+    "skills": ["C", "LaTeX"]
+  },
+  {
+    "head": "Proxy Server",
+    "sub": "Man in the Middle Attack",
+    "desc": "A simple proxy server for intercepting HTTP requests between a client and a server.",
+    "date": "19 Oct 2019",
+    "category": "Uni",
+    "skills": ["Python"],
+    "github": "https://github.com/davidjgolding/ProxyServer"
+  },
+  {
+    "head": "Scraper",
+    "sub": "Chrome Extension for LinkedIn Recruiter",
+    "desc": "Semi-intelligently scraped profiles from LinkedIn Recruiter once the extension was activiated and copied the results to the clipboard.",
+    "date": "01 Sep 2019",
+    "category": "Uni",
+    "skills": ["JavaScript", "JQuery"],
+    "github": "https://github.com/davidjgolding/Scraper"
+  },
+  {
+    "head": "Website v1",
+    "sub": "My first website",
+    "desc": "A dynamic single page site showing information about me and past projects I've been involved with.",
+    "date": "01 Jun 2019",
+    "category": "Personal",
+    "skills": ["HTML", "CSS", "JavaScript", "JQuery"],
+    "github": "https://github.com/davidjgolding/Website-v1"
+  },
+  {
+    "head": "Blockchain",
+    "sub": "A beginners blockchain",
+    "desc": "A simple blockchain containing an arbitrary number of blocks. Each block contained data and the hash of the previous block.",
+    "date": "01 May 2019",
+    "category": "Personal",
+    "skills": ["Java", "Gradle"],
+    "github": "https://github.com/davidjgolding/blockchain"
+  },
+  {
+    "head": "Witter",
+    "sub": "CS126",
+    "desc": "Replicated the basic functionality of Twitter, using AVL trees and Hash tables as the core data structures.",
+    "date": "01 Mar 2019",
+    "category": "Uni",
+    "skills": ["Java"]
+  },
+  {
+    "head": "Scratch Clone",
+    "sub": "CS141",
+    "desc": "Developed an evalutor capable of parsing instructions, updating the state and outputting the updated state.",
+    "date": "01 Mar 2019",
+    "category": "Uni",
+    "skills": ["Haskell", "HUnit"]
+  },
+  {
+    "head": "Mastermind",
+    "sub": "CS141",
+    "desc": "Implemented Donald Knuth's algorithm to facilitate cracking any 4 character code in a maximum of 5 guesses.",
+    "date": "01 Feb 2019",
+    "category": "Uni",
+    "skills": ["Haskell", "HUnit"]
+  },
+  {
+    "head": "Buggy Controller",
+    "sub": "CS132",
+    "desc": "Group project to develop code for a microprocessor which allowed a buggy to follow a visible path.",
+    "date": "23 Jan 2019",
+    "category": "Uni",
+    "skills": ["C"]
+  },
+  {
+    "head": "Maze",
+    "sub": "CS118",
+    "desc": "Navigated a robot around a virtual maze using DFS without crashing into walls whilst moving closer to the target.",
+    "date": "01 Oct 2018",
+    "category": "Uni",
+    "skills": ["Java", "JUnit"]
+  },
+  {
+    "head": "Virtual Trading",
+    "sub": "A-Level Coursework",
+    "desc": "A client-server virtual forex trading platform utilising networking and threading with a GUI.",
+    "date": "1 May 2018",
+    "category": "School",
+    "skills": ["Python", "Tkinter", "MySQL"],
+    "github": "https://github.com/davidjgolding/ALevelCoursework"
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "entity": "R3",
+    "role": "Software Engineer Intern",
+    "location": "London, UK",
+    "duration": "Summer 2020",
+    "logo": "r3.png",
+    "description": [
+      "R3 develop a distributed-ledger platform; Corda. During my time here, I had the opportunity to work on both the open-source and enterprise version of Corda.",
+      "I was initially placed within the Enterprise Network Manager team. Here, I had the opportunity to write code in Kotlin and use dev tools such as Azure, Kubernetes, Docker and Gradle. My role consisted of fixing bugs relating to logging and error messages.",
+      "For the second part of my internship, I was positioned within Kernel - the core of Corda. Once again, I was tasked with fixing bugs in a new database migration tool before the next release of Corda.",
+      "In addition to my primary responsibilities, I had the opportunity to participate in R3's \"Internship Academy\". This was a day of working with other interns to research and pitch companies to R3's executive committee to whom they should target. I really enjoyed this collaborative experience with interns from across the company.",
+      "Another opportunity I was involved with was R3's Engineering Hackathon. You were randomly partnered with other engineers and tasked with developing a game on Corda within 48 hours. My team's idea was to develop CordShips - Battleships on Corda and my role focused on developing the API for communication between the frontend and Corda. I was extremely proud of the team effort and we won best overall!"
+    ]
+  },
+  {
+    "entity": "Hack Cambridge",
+    "role": "Competitor",
+    "location": "Cambridge, UK",
+    "duration": "January 2020",
+    "logo": "hackcambridge.png",
+    "description": [
+      "I was selected to take part in Hack Cambridge 2020. My idea was centred around environmental sustainability; to create a system which allowed users to track their energy wastage in their home and learn from this to automatically make adjustments. I divided my team (4 members) in half - specialising in hardware and software. The hardware team focused on using an Arduino, various sensors (light, heat, sound, movement) to determine the state of a room and actuators in order to make adjustments.",
+      "They recorded the state of the room, adding this data to a database hosted on AWS and created an interface to control the lights and heating.",
+      "I focused on developing both the front and back end of the web application; creating both a UI for the user to visually see their energy usage and energy wastage (in essence determined by when energy is consumed and there is no activity) and interpreting data to determine if an action should be taken. Based on the previous history and the state of the current room, if there was minimal activity, a request would be made to the hardware interface to turn off the lights and reduce the heating. Through the web app, users could also manually make adjustments remotely.",
+      "Overall, it was a great opportunity and challenge; with many technical challenges occurring and overcome. Not only this, it was great to work effectively in a team with like-minded individuals."
+    ]
+  },
+  {
+    "entity": "Microsoft",
+    "role": "Student Partner",
+    "location": "University of Warwick, UK",
+    "duration": "2019 - Present",
+    "logo": "microsoft.png",
+    "description": [
+      "Since 2019, I've been a Student Partner at Warwick for Microsoft. This has allowed me to become apart of an extremely talented community as well as giving me access to a wealth of Microsoft resources.",
+      "In addition, I've been able to represent Microsoft on campus by helping other students with their technical issues - not limited to issues with Microsoft related products. This has been a great way to improve my own technical skills but also it's helped to improve my communication skills, particularly in regards to explaining a problem and discussing a potential solution.",
+      "One of the most valuable things about the program is that it gives you access to Azure and the training for it. With cloud computing becoming increasingly the norm, gaining access to such resources is crucial to keep relevant with what employers are looking for expertise in. It's extremely useful to have the ability to spin up a remote virtual machine or a database on demand in order to assist with projects.",
+      "I'm looking forward to continuing the role in my 3rd year and exploring more of the opportunities that the program has to offer.",
+      "Overall, it's a great program and I'd recommend it to anyone who is considering it. "
+    ]
+  },
+  {
+    "entity": "SourceChain",
+    "role": "Researcher",
+    "location": "London, UK",
+    "duration": "Summer 2019",
+    "logo": "sourcechain.png",
+    "description": [
+      "SourceChain is an online recruitment platform. In 2019, they were looking to expand their customer base to Germany. My role consisted of creating a target market contact list containing senior individuals at relevant companies.",
+      "The majority of my work consisted of utilising LinkedIn Recruiter. I believed the task was easily automatable, therefore, in my spare time, I developed a Chrome extension; Scraper. Presented with a search result on LinkedIn Recruiter, with the press of a button, Scraper intelligently collected the desired data from each profile and copied it to the clipboard in a friendly format; allowing it to be pasted directly into a spreadsheet. This allowed me to complete the task far faster than if I had manually completed it.",
+      "SourceChain requested to use Scraper for themselves before I left.",
+      "Upon completion, the target market contact list consisted of over 8,000 entries of relevant individuals that they could target. In addition, for each entry, I provided a best guess at the individual's email addresses based on the email formats used by the company.",
+      "I was also involved in another project for a sister company, which required me to maintain and update the contents of a WordPress site. This was a great opportunity to become involved with a startup."
+    ]
+  },
+  {
+    "entity": "RDC",
+    "role": "Administrative Assistant",
+    "location": "Sleaford, UK",
+    "duration": "Summer 2018",
+    "logo": "rdc.png",
+    "description": [
+      "This was my first formal role, however, I was given a lot of scope to work on tasks which were not only engaging but of relevance to my interests. ",
+      "My primary responsibility was to support departments in their administrative and technical requirements. This included researching and purchasing equipment, filing and archiving documents and assisting colleagues with their IT issues.",
+      "It also gave me the opportunity to essentially act as an IT consultant - assessing their current IT practises and suggesting how they could be improved. For example, I proposed and then successfully migrated their client file log from a spreadsheet to a database. Not only was this solution more efficient, but it also increased usability by facilitating forms and reports (utilising VBA and SQL).",
+      "Another project in which I was involved with was updating the company website. This had just been relaunched, therefore, I was involved in uploading and maintaining content and analysing traffic using Google Analytics.",
+      "I was also involved in increasing both employee and customer awareness regarding GDPR for HR. This took the form of conducting research, producing presentations and then updating company policy documentation."
+    ]
+  }
+]
