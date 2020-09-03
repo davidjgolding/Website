@@ -6,6 +6,7 @@ import Helmet from "react-helmet";
 import { Navbar, Nav } from "react-bootstrap";
 import Projects from "./data/projects.json";
 import Experience from "./data/experience.json";
+import Tags from "./data/tags.json";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import $ from "jquery";
 
@@ -126,7 +127,7 @@ export default class App extends Component {
           <div className="slide-container" style={{ opacity: "1" }}>
             <WelcomeSlide />
             <ExperienceSlide data={Experience} />
-            <PortfolioSlide projects={Projects} />
+            <PortfolioSlide projects={Projects} tags={Tags}/>
             <footer class="page-footer font-small">
               <div
                 class="footer-copyright text-right py-3"

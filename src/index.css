@@ -139,7 +139,8 @@ code {
 .carousel-control-prev {
   display: none;
   position: relative;
-  margin: 0 30px;
+  margin: 0;
+  padding: 30px;
 }
 
 @media (min-width: 769px) {
@@ -666,7 +667,7 @@ h2 {
   .welcome-content {
     margin: 0px 10px;
     margin-bottom: 0px;
-    font-size: 18px;
+    font-size: 17px;
     text-align: justify;
     background-attachment: scroll;
   }

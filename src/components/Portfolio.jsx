@@ -4,17 +4,7 @@ import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
 import $ from "jquery";
 
-const tag_colours = {
-  Java: "#E66F00",
-  React: "#00D8FE",
-  Python: "#3375AA",
-  JavaScript: "#F5DE1B",
-  Haskell: "#605187",
-  C: "#AABACD",
-  Django: "#092E20",
-  JavaCC: "#277F00",
-};
-
+var tag_colours;
 const max_cards = 8;
 
 function parseDate(date) {
@@ -105,8 +95,8 @@ class CustomCarousel extends Component {
 
   render() {
     const slides = split(this.state.projects, this.state.max_cards);
-    if (this.state.current > slides.length - 1) {
-      this.setState({ current: slides.length - 1 });
+    if (this.state.current >= slides.length) {
+      this.setState({ current: slides.length-1});
     }
     return (
       <div className="s-container">
@@ -174,10 +164,11 @@ export default class PortfolioSlide extends Component {
       max_cards: max_cards,
       count: 0,
     };
+    tag_colours = props.tags
   }
 
   maxCards() {
-    var dim = Math.round(window.innerHeight / 350) * 2;
+    var dim = Math.round(window.innerHeight / 290) * 2;
     if (dim < 2) {
       dim = 2;
     }

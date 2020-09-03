@@ -24,3 +24,4 @@ yarn-error.log*
 
 src/data/experience.json
 src/data/projects.json
+src/data/tags.json
