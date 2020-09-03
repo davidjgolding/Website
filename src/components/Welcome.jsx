@@ -54,7 +54,7 @@ export default function ContactSlide(props) {
               src="curved-arrow-2.svg"
               alt="Curved Arrow"
             />
-            <div className="d-flex flex-row welcome-title">ƒ
+            <div className="d-flex flex-row welcome-title">
               <div className="p-2 welcome-title-item">
                 <h3>ME</h3>
               </div>
