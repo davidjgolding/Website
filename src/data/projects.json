@@ -95,7 +95,7 @@
   {
     "head": "Scraper",
     "sub": "Chrome Extension for LinkedIn Recruiter",
-    "desc": "Semi-intelligently scraped profiles from LinkedIn Recruiter once the extension was activiated and copied the results to the clipboard.",
+    "desc": "Semi-intelligently scraped profiles from LinkedIn Recruiter copying the results to the clipboard.",
     "date": "01 Sep 2019",
     "category": "Uni",
     "skills": ["JavaScript", "JQuery"],
