@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Tab, Row, Col, ListGroup, Card } from "react-bootstrap";
+import { Tab, Col, ListGroup, Card } from "react-bootstrap";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import $ from "jquery";
 import ResizeSensor from "css-element-queries/src/ResizeSensor";
@@ -34,9 +34,9 @@ class ExperienceBody extends Component {
       <Tab.Pane className="tab-pane" eventKey={prefix + this.state.entity}>
         <Card className={className}>
           <Card.Body className="experience-card-body">
-            <div class={"experience-anchor-button"}>
+            <div className={"experience-anchor-button"}>
               <AnchorLink
-                class={"experience-anchor-button"}
+                className={"experience-anchor-button"}
                 offset="165"
                 href={"#" + body(this.state.entity)}
               >
@@ -51,15 +51,15 @@ class ExperienceBody extends Component {
                   aria-controls={"#" + body(this.state.entity)}
                   onClick={this.expand}
                 >
-                  <div class="d-flex flex-row experience-card-header">
+                  <div className="d-flex flex-row experience-card-header">
                     <div className="company-logo-wrapper">
                       <img
-                        class="p-2 company-logo"
+                        className="p-2 company-logo"
                         src={"./" + this.state.logo}
-                        alt={this.state.entity + "logo"}
+                        alt={this.state.entity + " logo"}
                       />
                     </div>
-                    <div class="p-2">
+                    <div className="p-2">
                       <Card.Title>{this.state.role}</Card.Title>
                       <Card.Text>{this.state.location}</Card.Text>
                     </div>
@@ -68,7 +68,6 @@ class ExperienceBody extends Component {
                         width="1em"
                         height="1em"
                         viewBox="0 0 16 16"
-                        class="bi bi-chevron-down"
                         fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg"
                         className={
@@ -78,7 +77,7 @@ class ExperienceBody extends Component {
                         }
                       >
                         <path
-                          fill-rule="evenodd"
+                          fillRule="evenodd"
                           d="M1.646 4.646a.5.5 0 0 1 .708 0L8 
                           10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 
                           0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
@@ -89,14 +88,19 @@ class ExperienceBody extends Component {
                 </button>
               </AnchorLink>
             </div>
-            <Card.Text
+            <div
               className="experience-card-text collapse "
               id={body(this.state.entity)}
             >
-              {this.state.description.map((par) => (
-                <p style={{ textAlign: "justify" }}>{par}</p>
+              {this.state.description.map((par, i) => (
+                <p
+                  style={{ textAlign: "justify" }}
+                  key={this.state.entity + "-text-" + i}
+                >
+                  {par}
+                </p>
               ))}
-            </Card.Text>
+            </div>
           </Card.Body>
         </Card>
       </Tab.Pane>
@@ -108,7 +112,7 @@ export default class ExperienceSlide extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: this.props.data,
+      experience: this.props.experience,
     };
   }
 
@@ -120,10 +124,14 @@ export default class ExperienceSlide extends Component {
 
   render() {
     const prefix = "experience-";
-    const sp = this.state.data.reduce(
+    const sp = this.state.experience.reduce(
       (acc, item, i) => {
         acc[0].push(
-          <ListGroup.Item action eventKey={prefix + item.entity}>
+          <ListGroup.Item
+            action
+            key={prefix + item.entity}
+            eventKey={prefix + item.entity}
+          >
             <Card
               id={"experience-card-" + i}
               className="text-black experience-card"
@@ -143,7 +151,8 @@ export default class ExperienceSlide extends Component {
             location={item.location}
             description={item.description}
             logo={item.logo}
-            lastCard={i == this.state.data.length - 1}
+            key={item.entity}
+            lastCard={i === this.state.experience.length - 1}
           />
         );
         return acc;
@@ -159,7 +168,7 @@ export default class ExperienceSlide extends Component {
               <div className="experience-contents-cards">
                 <Tab.Container
                   id="list-group-tabs-example"
-                  defaultActiveKey={prefix + this.state.data[0].entity}
+                  defaultActiveKey={prefix + this.state.experience[0].entity}
                 >
                   <Col sm={4}>
                     <ListGroup>{sp[0]}</ListGroup>

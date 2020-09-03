@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PortfolioSlide from "./components/Portfolio";
+import ProjectSlide from "./components/Projects";
 import ExperienceSlide from "./components/Experience";
 import WelcomeSlide from "./components/Welcome";
 import Helmet from "react-helmet";
@@ -94,7 +94,7 @@ export default class App extends Component {
             {this.navItem(
               "nav-home",
               "navbar-brand",
-              "#home",
+              "#welcome",
               <h1 style={{ marginTop: "auto" }}>DAVID GOLDING</h1>
             )}
             <Navbar.Toggle
@@ -126,11 +126,11 @@ export default class App extends Component {
         <div className="body-content" onClick={this.hideNavIfShown}>
           <div className="slide-container" style={{ opacity: "1" }}>
             <WelcomeSlide />
-            <ExperienceSlide data={Experience} />
-            <PortfolioSlide projects={Projects} tags={Tags}/>
-            <footer class="page-footer font-small">
+            <ExperienceSlide experience={Experience} />
+            <ProjectSlide projects={Projects} tags={Tags} />
+            <footer className="page-footer font-small">
               <div
-                class="footer-copyright text-right py-3"
+                className="footer-copyright text-right py-3"
                 style={{ paddingRight: "15px" }}
               >
                 © David Golding {new Date().getFullYear()}

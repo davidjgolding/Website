@@ -216,7 +216,7 @@ footer {
   background-color: #343a40;
 }
 
-.portfolio {
+.project {
   background-color: #6876a5;
   min-height: 90vh;
   display: flex;
@@ -585,7 +585,7 @@ h2 {
     font-size: 3em;
   }
 
-  .portfolio {
+  .project {
     min-height: auto;
   }
 
@@ -624,7 +624,7 @@ h2 {
 }
 
 @media (max-width: 768px) {
-  .portfolio {
+  .project {
     display: block;
   }
 
@@ -778,9 +778,9 @@ h2 {
 }
 @media (min-width: 769px) and (max-width: 1000px) {
   .welcome-statement {
-    display:  block;
+    display: block;
   }
-  
+
   .welcome-inner {
     display: block;
     max-width: 680px;
@@ -801,5 +801,5 @@ h2 {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%
+  width: 100%;
 }

@@ -48,17 +48,13 @@ export default function ContactSlide(props) {
         </div>
         <div className="welcome-container">
           <div className="welcome-card">
-            <img
-              className="welcome-img"
-              src="dg.png"
-              alt="Image of David Golding"
-            />
+            <img className="welcome-img" src="dg.png" alt="David Golding" />
             <img
               className="welcome-img-arrow"
               src="curved-arrow-2.svg"
               alt="Curved Arrow"
             />
-            <div className="d-flex flex-row welcome-title">
+            <div className="d-flex flex-row welcome-title">ƒ
               <div className="p-2 welcome-title-item">
                 <h3>ME</h3>
               </div>
@@ -66,19 +62,50 @@ export default function ContactSlide(props) {
 
             <div className="welcome-content">
               <p>
-                Hi 👋, I’m a final year Computer Science student at {warwick}.
+                Hi{" "}
+                <span role="img" aria-label="hand wave">
+                  👋
+                </span>
+                , I’m a final year Computer Science student at {warwick}.
               </p>
               <p>
-                I ❤️ building things which help people and ensuring they’re 🔒.
-                You’ll normally find me playing with {python} or {kotlin}, 
+                I{" "}
+                <span role="img" aria-label="love">
+                  ❤️
+                </span>{" "}
+                building things which help people and ensuring they’re{" "}
+                <span role="img" aria-label="secure">
+                  🔒
+                </span>
+                . You’ll normally find me playing with {python} or {kotlin},
                 sometimes with the help of {docker} and {azure}.
               </p>
               <p>
-                Aside from 🖥️'s, I'm an extremely competitive 🏓 and 🏸 player. 
-                I also find more relaxing entertainment by playing the 🎹.
+                Aside from{" "}
+                <span role="img" aria-label="computers">
+                  🖥️
+                </span>
+                , I'm an extremely competitive{" "}
+                <span role="img" aria-label="table tennis">
+                  🏓
+                </span>{" "}
+                and{" "}
+                <span role="img" aria-label="badminton">
+                  🏸
+                </span>{" "}
+                player, however, for more relaxing entertainment I often play
+                the{" "}
+                <span role="img" aria-label="piano">
+                  🎹
+                </span>
+                .
               </p>
               <p>
-                I’m always open to new opportunities so please reach out 😁.
+                I’m always open to new opportunities so please reach out{" "}
+                <span role="img" aria-label="grin">
+                  😁
+                </span>
+                .
               </p>
               <div className="contact">
                 {github}
