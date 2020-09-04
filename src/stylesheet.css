@@ -17,8 +17,10 @@ code {
 }
 
 .card {
-  border-radius: 2px;
+  border-radius: 10px;
   margin: 5px !important;
+  background-color: rgba(255, 255, 255, 0.6);
+
 }
 
 .carousel {
@@ -132,9 +134,9 @@ code {
   padding: 0;
   max-width: 280px;
   z-index: 1;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.6);
   flex: 0 1 auto;
-  border-radius: 2px 0px 0px 2px;
+  border-radius: 20px 0px 0px 20px;
 }
 .carousel-control-next,
 .carousel-control-prev {
@@ -191,7 +193,9 @@ h1 {
 
 .experience-card-contents {
   margin: 0 !important;
-  border-radius: 0px 2px 2px 0px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 0px 20px 20px 0px;
+  z-index: 1000;
 }
 
 .col-sm-8 {
@@ -262,7 +266,6 @@ a:focus {
 }
 
 .list-group {
-  background-color: white;
   min-height: 650px;
 }
 
@@ -458,6 +461,7 @@ a:hover {
 
 .list-group-item {
   flex: 1;
+  background-color: transparent;
 }
 
 .welcome {
@@ -999,6 +1003,7 @@ h2 {
 
 .tag-container {
   position: absolute;
+  z-index: 1000;
   bottom: 0;
   left: 0;
   width: 100%;
