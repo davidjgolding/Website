@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import WelcomeSlide from "./components/Welcome";
 import ProjectSlide from "./components/Projects";
 import ExperienceSlide from "./components/Experience";
-import WelcomeSlide from "./components/Welcome";
+import AboutSlide from "./components/About";
 import Helmet from "react-helmet";
 import { Navbar, Nav } from "react-bootstrap";
 import Projects from "./data/projects.json";
@@ -23,13 +24,7 @@ export default class App extends Component {
       <AnchorLink
         id={id}
         className={className}
-        offset={() => {
-          if (window.innerWidth < 768) {
-            return 165;
-          } else {
-            return 50;
-          }
-        }}
+        offset={"50"}
         href={href}
         onClick={() => this.hideNavIfShown()}
       >
@@ -58,18 +53,32 @@ export default class App extends Component {
   }
 
   scroll() {
+    const about = $(window).scrollTop() - $("#about").offset().top;
     const experience = $(window).scrollTop() - $("#experience").offset().top;
-    if (experience < -600 || $(window).scrollTop() < 200) {
+    const projects = $(window).scrollTop() - $("#projects").offset().top;
+    if (about < -600 || $(window).scrollTop() < 200) {
+      $("#nav-about").blur();
       $("#nav-experience").blur();
       $("#nav-projects").blur();
+      $("#nav-about").removeClass("nav-active");
       $("#nav-experience").removeClass("nav-active");
       $("#nav-projects").removeClass("nav-active");
-    } else if ($("#experience").offset().top - 600 > experience) {
+    } else if ($("#about").offset().top - 600 > about && about > projects ) {
+      $("#nav-experience").blur();
       $("#nav-projects").blur();
+      $("#nav-about").addClass("nav-active");
+      $("#nav-experience").removeClass("nav-active");
+      $("#nav-projects").removeClass("nav-active");
+    } else if (experience - 600 < 0) {
+      $("#nav-about").blur();
+      $("#nav-projects").blur();
+      $("#nav-about").removeClass("nav-active");
       $("#nav-experience").addClass("nav-active");
       $("#nav-projects").removeClass("nav-active");
     } else {
+      $("#nav-about").blur();
       $("#nav-experience").blur();
+      $("#nav-about").removeClass("nav-active");
       $("#nav-experience").removeClass("nav-active");
       $("#nav-projects").addClass("nav-active");
     }
@@ -80,7 +89,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="site-contents">
+      <div className="site-contents area">
         <Helmet bodyAttributes={{ style: "background-color : #EAECEF" }} />
         <Navbar
           className="navbar navbar-default "
@@ -88,7 +97,6 @@ export default class App extends Component {
           variant="dark"
           expand="md"
           fixed="top"
-          sticky="top"
         >
           <div className="mobile-nav d-flex justify-content-between">
             {this.navItem(
@@ -104,7 +112,15 @@ export default class App extends Component {
           </div>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <div style={{ width: "100px", textAlign: "center" }}>
+            <div style={{ marginRight: "15px" }}>
+                {this.navItem(
+                  "nav-about",
+                  "nav-link",
+                  "#about",
+                  "About"
+                )}
+              </div>
+              <div style={{ marginRight: "15px" }}>
                 {this.navItem(
                   "nav-experience",
                   "nav-link",
@@ -112,7 +128,7 @@ export default class App extends Component {
                   "Experience"
                 )}
               </div>
-              <div style={{ width: "80px", textAlign: "center" }}>
+              <div>
                 {this.navItem(
                   "nav-projects",
                   "nav-link",
@@ -126,6 +142,7 @@ export default class App extends Component {
         <div className="body-content" onClick={this.hideNavIfShown}>
           <div className="slide-container" style={{ opacity: "1" }}>
             <WelcomeSlide />
+            <AboutSlide />
             <ExperienceSlide experience={Experience} />
             <ProjectSlide projects={Projects} tags={Tags} />
             <footer className="page-footer font-small">
@@ -138,7 +155,24 @@ export default class App extends Component {
             </footer>
           </div>
         </div>
+        <div style={{height: "100vh", position: "fixed", top: 0, width: "100%"}}>
+        <div className="area" >
+            <ul className="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+    </div>
       </div>
+
     );
   }
 }

@@ -208,7 +208,7 @@ export default class ProjectSlide extends Component {
     return (
       <section id="projects" className="project slide">
         <div className="projects-container">
-          <div className="slide-title">PROJECTS.</div>
+          <div className="slide-title">Projects</div>
           <div
             className="projects-content"
             style={{ width: "100%", maxWidth: "1200px", overflow: "hidden" }}

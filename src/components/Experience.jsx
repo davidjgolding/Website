@@ -162,7 +162,7 @@ export default class ExperienceSlide extends Component {
     return (
       <section id="experience" className="experience slide">
         <div className="experience-container">
-          <div className="slide-title">EXPERIENCE.</div>
+          <div className="slide-title">Experience</div>
           <div>
             <div className="experience-contents">
               <div className="experience-contents-cards">
