@@ -659,9 +659,9 @@ a:hover {
 .about-card {
   max-width: 680px;
   /* min-height: 420px; */
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.6);
   /* padding-bottom: 40px; */
-  border-radius: 2px;
+  border-radius: 20px;
   z-index: 1000;
 }
 
