@@ -90,13 +90,13 @@ export default class App extends Component {
   render() {
     return (
       <div className="site-contents area">
-        <Helmet bodyAttributes={{ style: "background-color : #EAECEF" }} />
+        <Helmet bodyAttributes={{ style: "background-color : #111111" }} />
         <Navbar
           className="navbar navbar-default "
-          bg="dark"
           variant="dark"
           expand="md"
           fixed="top"
+          style={{backgroundColor: "#111111"}}
         >
           <div className="mobile-nav d-flex justify-content-between">
             {this.navItem(
@@ -148,7 +148,7 @@ export default class App extends Component {
             <footer className="page-footer font-small">
               <div
                 className="footer-copyright text-right py-3"
-                style={{ paddingRight: "15px" }}
+                style={{ paddingRight: "15px", backgroundColor: "#111111"}}
               >
                 © David Golding {new Date().getFullYear()}
               </div>
