@@ -5,7 +5,7 @@ import $ from "jquery";
 import Div100vh from "react-div-100vh";
 
 export default class WelcomeSlide extends Component {
-  
+
   hideNavIfShown() {
     if ($("#basic-navbar-nav").hasClass("show")) {
       this.hideNav();
@@ -42,7 +42,7 @@ export default class WelcomeSlide extends Component {
             <h2>University of Warwick</h2>
             <div className="show-more-container">
               <div>
-                <AnchorLink offset="50" href={"#about"} className="show-more">
+                <AnchorLink offset="53" href={"#about"} className="show-more">
                   Show More
                 </AnchorLink>
               </div>

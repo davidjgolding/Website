@@ -32,7 +32,7 @@ function ProjectCard(state) {
           <Card.Title>{project.head}</Card.Title>
           <Card.Text
             style={{
-              color: "#6b6b6b",
+              color: "#696969",
               marginLeft: 5,
               padding: 0,
               textAlign: "right",
@@ -43,7 +43,7 @@ function ProjectCard(state) {
             {parseDate(project.date)}
           </Card.Text>
         </div>
-        <Card.Text style={{ color: "#6b6b6b" }}>{project.sub}</Card.Text>
+        <Card.Text style={{ color: "#696969" }}>{project.sub}</Card.Text>
         <Card.Text className="card-content">{project.desc}</Card.Text>
         <div className="tag-container" style={{ padding: 0 }}>
           <div className="d-flex" style={{ padding: "1.25rem" }}>
