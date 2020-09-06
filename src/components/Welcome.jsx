@@ -5,10 +5,7 @@ import $ from "jquery";
 import Div100vh from "react-div-100vh";
 
 export default class WelcomeSlide extends Component {
-  constructor(props) {
-    super(props);
-  }
-
+  
   hideNavIfShown() {
     if ($("#basic-navbar-nav").hasClass("show")) {
       this.hideNav();

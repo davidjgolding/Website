@@ -24,7 +24,7 @@ export default class App extends Component {
       <AnchorLink
         id={id}
         className={className}
-        offset={"50"}
+        offset={"53"}
         href={href}
         onClick={() => this.hideNavIfShown()}
       >
@@ -56,33 +56,35 @@ export default class App extends Component {
     const about = $(window).scrollTop() - $("#about").offset().top;
     const experience = $(window).scrollTop() - $("#experience").offset().top;
     const projects = $(window).scrollTop() - $("#projects").offset().top;
-    if (about < -600 || $(window).scrollTop() < 200) {
-      $("#nav-about").blur();
-      $("#nav-experience").blur();
-      $("#nav-projects").blur();
-      $("#nav-about").removeClass("nav-active");
-      $("#nav-experience").removeClass("nav-active");
-      $("#nav-projects").removeClass("nav-active");
-    } else if ($("#about").offset().top - 600 > about && about > projects) {
-      $("#nav-experience").blur();
-      $("#nav-projects").blur();
-      $("#nav-about").addClass("nav-active");
-      $("#nav-experience").removeClass("nav-active");
-      $("#nav-projects").removeClass("nav-active");
-    } else if (experience - 600 < 0) {
-      $("#nav-about").blur();
-      $("#nav-projects").blur();
-      $("#nav-about").removeClass("nav-active");
-      $("#nav-experience").addClass("nav-active");
-      $("#nav-projects").removeClass("nav-active");
-    } else {
+
+    if (projects > -200) {
       $("#nav-about").blur();
       $("#nav-experience").blur();
       $("#nav-about").removeClass("nav-active");
       $("#nav-experience").removeClass("nav-active");
       $("#nav-projects").addClass("nav-active");
+    } else if (experience > -200) {
+      $("#nav-about").blur();
+      $("#nav-projects").blur();
+      $("#nav-about").removeClass("nav-active");
+      $("#nav-experience").addClass("nav-active");
+      $("#nav-projects").removeClass("nav-active");
+    } else if (about > -200) {
+      $("#nav-experience").blur();
+      $("#nav-projects").blur();
+      $("#nav-about").addClass("nav-active");
+      $("#nav-experience").removeClass("nav-active");
+      $("#nav-projects").removeClass("nav-active");
+    } else {
+      $("#nav-about").blur();
+      $("#nav-experience").blur();
+      $("#nav-projects").blur();
+      $("#nav-about").removeClass("nav-active");
+      $("#nav-experience").removeClass("nav-active");
+      $("#nav-projects").removeClass("nav-active");
     }
   }
+  
   componentDidMount() {
     window.addEventListener("scroll", this.scroll);
   }
