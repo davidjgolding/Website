@@ -22,17 +22,16 @@ export default function AboutSlide(props) {
           <div className="about-card">
             <div className="about-content" style={{ color: "white" }}>
               <p>
-                Hi
+                Hi{" "}
                 <span role="img" aria-label="hand wave">
                   👋
                 </span>
                 , I’m a final year Computer Science student at the University of
                 Warwick.
-                {/* {warwick} */}
               </p>
               <p>
                 I love building things which help people and ensuring they’re
-                secure
+                secure{" "}
                 <span role="img" aria-label="secure">
                   🔒
                 </span>
@@ -43,13 +42,13 @@ export default function AboutSlide(props) {
                 Aside from coding, I'm an extremely competitive table-tennis{" "}
                 <span role="img" aria-label="table tennis">
                   🏓
-                </span>
-                and badminton
+                </span>{" "}
+                and badminton{" "}
                 <span role="img" aria-label="badminton">
                   🏸
-                </span>
+                </span>{" "}
                 player, however, for more relaxing entertainment I often play
-                the piano
+                the piano{" "}
                 <span role="img" aria-label="piano">
                   🎹
                 </span>
