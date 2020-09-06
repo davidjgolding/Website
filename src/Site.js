@@ -63,7 +63,7 @@ export default class App extends Component {
       $("#nav-about").removeClass("nav-active");
       $("#nav-experience").removeClass("nav-active");
       $("#nav-projects").removeClass("nav-active");
-    } else if ($("#about").offset().top - 600 > about && about > projects ) {
+    } else if ($("#about").offset().top - 600 > about && about > projects) {
       $("#nav-experience").blur();
       $("#nav-projects").blur();
       $("#nav-about").addClass("nav-active");
@@ -96,7 +96,7 @@ export default class App extends Component {
           variant="dark"
           expand="md"
           fixed="top"
-          style={{backgroundColor: "#111111"}}
+          style={{ backgroundColor: "rgba(17,17,17,0.9)" }}
         >
           <div className="mobile-nav d-flex justify-content-between">
             {this.navItem(
@@ -112,13 +112,8 @@ export default class App extends Component {
           </div>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-            <div style={{ marginRight: "15px" }}>
-                {this.navItem(
-                  "nav-about",
-                  "nav-link",
-                  "#about",
-                  "About"
-                )}
+              <div style={{ marginRight: "15px" }}>
+                {this.navItem("nav-about", "nav-link", "#about", "About")}
               </div>
               <div style={{ marginRight: "15px" }}>
                 {this.navItem(
@@ -147,32 +142,35 @@ export default class App extends Component {
             <ProjectSlide projects={Projects} tags={Tags} />
             <footer className="page-footer font-small">
               <div
-                className="footer-copyright text-right py-3"
-                style={{ paddingRight: "15px", backgroundColor: "#111111"}}
+                className="footer-copyright text-center py-3"
+                style={{ backgroundColor: "#EF4E4E" }}
               >
-                © David Golding {new Date().getFullYear()}
+                <p style={{ paddingBottom: 0, marginBottom: 0 }}>
+                  © David Golding {new Date().getFullYear()}
+                </p>
               </div>
             </footer>
           </div>
         </div>
-        <div style={{height: "100vh", position: "fixed", top: 0, width: "100%"}}>
-        <div className="area" >
+        <div
+          style={{ height: "100vh", position: "fixed", top: 0, width: "100%" }}
+        >
+          <div className="area">
             <ul className="circles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
-    </div >
-    </div>
+          </div>
+        </div>
       </div>
-
     );
   }
 }

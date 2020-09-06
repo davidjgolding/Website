@@ -2,13 +2,13 @@
     "Java": "#E66F00",
     "JUnit": "#239350",
     "Gradle": "#05232a",
-    "React": "#00D8FE",
+    "React": "#73fffa",
     "Python": "#3375AA",
     "Tkinter": "#2b5e92",
-    "JavaScript": "#F5DE1B",
+    "JavaScript": "#fff600",
     "Haskell": "#605187",
     "HUnit": "#605187",
-    "C": "#AABACD",
+    "C": "#000000",
     "Django": "#092E20",
     "JavaCC": "#277F00",
     "Kotlin": "#5754fb",
@@ -22,6 +22,6 @@
     "Oracle SQL": "#d2001c",
     "MySQL": "#496f8a",
     "JDBC": "#E66F00",
-    "HTML": "#000000",
-    "CSS": "#000000"
+    "HTML": "#E54C21",
+    "CSS": "#264DE4"
 }

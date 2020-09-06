@@ -29,10 +29,10 @@ function ProjectCard(state) {
     <Card className="text-black project-card" style={{ border: "none" }}>
       <Card.Body>
         <div className="d-flex justify-content-between">
-          <Card.Title>{project.head} </Card.Title>
+          <Card.Title>{project.head}</Card.Title>
           <Card.Text
             style={{
-              color: "grey",
+              color: "#6b6b6b",
               marginLeft: 5,
               padding: 0,
               textAlign: "right",
@@ -43,7 +43,7 @@ function ProjectCard(state) {
             {parseDate(project.date)}
           </Card.Text>
         </div>
-        <Card.Text style={{ color: "grey" }}>{project.sub}</Card.Text>
+        <Card.Text style={{ color: "#6b6b6b" }}>{project.sub}</Card.Text>
         <Card.Text className="card-content">{project.desc}</Card.Text>
         <div className="tag-container" style={{ padding: 0 }}>
           <div className="d-flex" style={{ padding: "1.25rem" }}>

@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Tab, Col, ListGroup, Card } from "react-bootstrap";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import $ from "jquery";
-import ResizeSensor from "css-element-queries/src/ResizeSensor";
+
 class ExperienceBody extends Component {
   constructor(props) {
     super(props);
@@ -37,7 +36,7 @@ class ExperienceBody extends Component {
             <div className={"experience-anchor-button"}>
               <AnchorLink
                 className={"experience-anchor-button"}
-                offset="165"
+                offset="167"
                 href={"#" + body(this.state.entity)}
               >
                 <button
@@ -116,12 +115,6 @@ export default class ExperienceSlide extends Component {
     };
   }
 
-  componentDidMount() {
-    new ResizeSensor($(".tab-content"), function () {
-      $(".col-sm-4").height($(".tab-content").height());
-    });
-  }
-
   render() {
     const prefix = "experience-";
     const sp = this.state.experience.reduce(
@@ -131,6 +124,10 @@ export default class ExperienceSlide extends Component {
             action
             key={prefix + item.entity}
             eventKey={prefix + item.entity}
+            style={{
+              borderBottom:
+                i === this.state.experience.length - 1 ? "none" : "",
+            }}
           >
             <Card
               id={"experience-card-" + i}

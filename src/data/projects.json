@@ -14,7 +14,7 @@
     "desc": "Distributed battleships game running on Corda for R3's Engineer Hackathon which won best overall.",
     "date": "18 Aug 2020",
     "category": "Work",
-    "skills": ["Kotlin", "React", "Corda"],
+    "skills": ["Kotlin", "JavaScript", "React", "Corda"],
     "github": "https://github.com/davidjgolding/CordShips"
   },
   {
