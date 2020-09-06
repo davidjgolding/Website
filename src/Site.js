@@ -84,7 +84,7 @@ export default class App extends Component {
       $("#nav-projects").removeClass("nav-active");
     }
   }
-  
+
   componentDidMount() {
     window.addEventListener("scroll", this.scroll);
   }
@@ -144,10 +144,16 @@ export default class App extends Component {
             <ProjectSlide projects={Projects} tags={Tags} />
             <footer className="page-footer font-small">
               <div
-                className="footer-copyright text-center py-3"
+                className="footer-copyright text-right py-3"
                 style={{ backgroundColor: "#EF4E4E" }}
               >
-                <p style={{ paddingBottom: 0, marginBottom: 0 }}>
+                <p
+                  style={{
+                    paddingBottom: 0,
+                    marginBottom: 0,
+                    paddingRight: "15px",
+                  }}
+                >
                   © David Golding {new Date().getFullYear()}
                 </p>
               </div>
