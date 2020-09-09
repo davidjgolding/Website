@@ -141,6 +141,10 @@ code {
     align-items: center;
   }
 
+  .col-sm-4 {
+    overflow-y: hidden
+  }
+
   .experience-card-contents {
     min-height: 650px;
   }
@@ -162,9 +166,6 @@ h1 {
   font-size: 20px;
 }
 
-.hidee {
-  display: block;
-}
 
 .experience-card {
   background-color: transparent;
