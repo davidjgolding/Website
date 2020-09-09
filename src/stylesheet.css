@@ -141,10 +141,6 @@ code {
     align-items: center;
   }
 
-  .col-sm-4 {
-    overflow-y: scroll;
-  }
-
   .experience-card-contents {
     min-height: 650px;
   }
@@ -178,7 +174,6 @@ h1 {
   margin: 0 !important;
   z-index: 1000;
   background-color: transparent;
-  border-radius: none;
   border: none;
 }
 
@@ -297,7 +292,6 @@ a:hover {
 @media (min-width: 769px) {
   .experience-card-body {
     padding: 0;
-    overflow-y: scroll;
   }
 }
 
@@ -885,7 +879,6 @@ h2 {
 
   .col-sm-8 {
     background-color: transparent;
-    border-radius: none;
   }
 
   .experience-card-contents {
