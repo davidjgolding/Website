@@ -6,11 +6,11 @@
     "duration": "Summer 2020",
     "logo": "r3.png",
     "description": [
-      "R3 develop a distributed-ledger platform; Corda. During my time here, I had the opportunity to work on both the open-source and enterprise version of Corda.",
-      "I was initially placed within the Enterprise Network Manager team. Here, I had the opportunity to write code in Kotlin and use dev tools such as Azure, Kubernetes, Docker and Gradle. My role consisted of fixing bugs relating to logging and error messages.",
-      "For the second part of my internship, I was positioned within Kernel - the core of Corda. Once again, I was tasked with fixing bugs in a new database migration tool before the next release of Corda.",
-      "In addition to my primary responsibilities, I had the opportunity to participate in R3's \"Internship Academy\". This was a day of working with other interns to research and pitch companies to R3's executive committee to whom they should target. I really enjoyed this collaborative experience with interns from across the company.",
-      "Another opportunity I was involved with was R3's Engineering Hackathon. You were randomly partnered with other engineers and tasked with developing a game on Corda within 48 hours. My team's idea was to develop CordShips - Battleships on Corda and my role focused on developing the API for communication between the frontend and Corda. I was extremely proud of the team effort and we won best overall!"
+      "R3 develop a distributed-ledger platform, Corda, which has both an open-source and enterprise offering (I worked on both).",
+      "During my time at R3, I was placed in two teams: Corda Enterprise Network Manager (CENM) and Kernel. In both teams, my primary responsibility was to develop bug fixes in Kotlin, often utilising dev tools such as Azure, Kubernetes, Docker and Gradle. The bugs I tackled were typically related to Corda Firewall, the database migration tool and logging.",
+      "In addition, I was involved in reviewing and approving code commits made by other developers which affected areas of the codebase that I'd worked on. I also carried out research and produced a report for R3's executive committee into another blockchain platform, Quorum. This focused on its open-sources libraries and use of Zero-Knowledge Proofs (ZKPs).",
+      "One of the most enjoyable tasks was R3's \"Internship Academy\". This consisted of a day spent with other interns (virtually) to research and pitch companies to the executive committee as to whom sales should target. It was a great collaborative experience with the chance to meet individuals from across the company.", 
+      "Another opportunity I took part in was R3's Engineering Hackathon. Engineers were randomly put into groups and tasked with developing a game on Corda within 48 hours. My team's idea was to develop CordShips - Battleships on Corda and I developed the API to facilitate communication between the frontend and Corda. I was extremely proud of the team effort and we won best overall!"
     ]
   },
   {
@@ -33,11 +33,11 @@
     "duration": "2019 - Present",
     "logo": "microsoft.png",
     "description": [
-      "Since 2019, I've been a Student Partner at Warwick for Microsoft. This has allowed me to become apart of an extremely talented community as well as giving me access to a wealth of Microsoft resources.",
-      "In addition, I've been able to represent Microsoft on campus by helping other students with their technical issues - not limited to issues with Microsoft related products. This has been a great way to improve my own technical skills but also it's helped to improve my communication skills, particularly in regards to explaining a problem and discussing a potential solution.",
-      "One of the most valuable things about the program is that it gives you access to Azure and the training for it. With cloud computing becoming increasingly the norm, gaining access to such resources is crucial to keep relevant with what employers are looking for expertise in. It's extremely useful to have the ability to spin up a remote virtual machine or a database on demand in order to assist with projects.",
-      "I'm looking forward to continuing the role in my 3rd year and exploring more of the opportunities that the program has to offer.",
-      "Overall, it's a great program and I'd recommend it to anyone who is considering it. "
+      "Since 2019, I've been a Student Partner at Warwick for Microsoft. This has allowed me to become apart of an extremely talented community and represent Microsoft on campus.",
+      "As part of the program, I've had the opportunity to put on and participate in events. The most recent event I was involved in was \"IoT on Azure\" - presenting how Azure can be used to provide a backend for IoT devices in addition to managing and controlling them.",
+      "I've also been able to help other students develop their technical understanding through workshops and increase awareness of Microsoft related products. Not only has this been a great way to improve my own technical skills but it's also helped my communication skills, particularly in regards to explaining a problem and discussing a potential solution.",
+      "Furthermore, the program has given me access to a wealth of Microsoft resources - including Azure. With cloud computing becoming increasingly the norm, gaining access to such resources is crucial to keep relevant with the skillset that employers desire. It's extremely useful to have the ability to spin up a remote virtual machine to assist with projects!",
+      "I'm looking forward to continuing the role in my 3rd year and exploring more of the opportunities that the program has to offer. It's a great program and I'd recommend it to anyone who's considering it. "
     ]
   },
   {
