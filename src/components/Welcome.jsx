@@ -37,7 +37,7 @@ export default class WelcomeSlide extends Component {
       <Div100vh id="welcome" className="welcome slide">
         <div className="welcome-container">
           <div style={{ textAlign: "center" }}>
-            <img className="welcome-img" src="dg.png" alt="David Golding" />
+            <img className="welcome-img" src="dg.jpg" alt="David Golding" />
             <h1>David Golding</h1>
             <h2>University of Warwick</h2>
             <div className="show-more-container">
