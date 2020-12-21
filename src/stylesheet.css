@@ -131,6 +131,8 @@ code {
   position: relative;
   margin: 0;
   padding: 30px;
+  background-color: transparent;
+  border: none;
 }
 
 @media (min-width: 769px) {

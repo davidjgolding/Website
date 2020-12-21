@@ -106,21 +106,21 @@ class CustomCarousel extends Component {
     }
     return (
       <div className="s-container">
-        <a
+        <button
           className={
             "carousel-control-prev " +
             (this.state.current <= 0 ? "make-hidden" : "make-visible")
           }
-          role="button"
+          // role="button"
           onClick={() => this.changeSlide(-1)}
-          href={void 0}
+          // href={void 0}
         >
           <span
             aria-hidden="true"
             className="carousel-control-prev-icon"
           ></span>
           <span className="sr-only">Previous</span>
-        </a>
+        </button>
 
         <div className="s-container">
           {slides.map((projects, i) => (
@@ -136,23 +136,23 @@ class CustomCarousel extends Component {
             />
           ))}
         </div>
-        <a
+        <button
           className={
             "carousel-control-next " +
             (this.state.current >= slides.length - 1
               ? "make-hidden"
               : "make-visible")
           }
-          role="button"
+          // role="button"
           onClick={() => this.changeSlide(1)}
-          href={void 0}
+          // href={void 0}
         >
           <span
             aria-hidden="true"
             className="carousel-control-next-icon"
           ></span>
           <span className="sr-only">Next</span>
-        </a>
+        </button>
       </div>
     );
   }

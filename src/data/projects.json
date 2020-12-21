@@ -1,5 +1,21 @@
 [
   {
+    "head": "Multi-Class Classifier",
+    "sub": "CS342",
+    "desc": "Created a classifer using PCA and a multi-class percepton for the Iris dataset.",
+    "date": "03 Dec 2020",
+    "category": "Uni",
+    "skills": ["Python"]
+  },
+  {
+    "head": "MiniC Compiler",
+    "sub": "CS325",
+    "desc": "Developed a recursive descent compiler using LLVM for a subset of the C language.",
+    "date": "30 Nov 2020",
+    "category": "Uni",
+    "skills": ["C++", "LLVM"]
+  },
+  {
     "head": "Website v2",
     "sub": "Fresh, new design",
     "desc": "Complete rewrite of my website: improving the design, cross-compatability and ease of maintenance.",

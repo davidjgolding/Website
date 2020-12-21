@@ -3,7 +3,7 @@ import WelcomeSlide from "./components/Welcome";
 import ProjectSlide from "./components/Projects";
 import ExperienceSlide from "./components/Experience";
 import AboutSlide from "./components/About";
-import Helmet from "react-helmet";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Navbar, Nav } from "react-bootstrap";
 import Projects from "./data/projects.json";
 import Experience from "./data/experience.json";
@@ -91,94 +91,101 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="site-contents area">
-        <Helmet bodyAttributes={{ style: "background-color : #111111" }} />
-        <Navbar
-          className="navbar navbar-default "
-          variant="dark"
-          expand="md"
-          fixed="top"
-          style={{ backgroundColor: "rgba(17,17,17,0.9)" }}
-        >
-          <div className="mobile-nav d-flex justify-content-between">
-            {this.navItem(
-              "nav-home",
-              "navbar-brand",
-              "#welcome",
-              <h1 style={{ marginTop: "auto" }}>DAVID GOLDING</h1>
-            )}
-            <Navbar.Toggle
-              aria-controls="basic-navbar-nav"
-              onClick={this.toggleNav}
-            />
-          </div>
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ml-auto">
-              <div style={{ marginRight: "15px" }}>
-                {this.navItem("nav-about", "nav-link", "#about", "About")}
-              </div>
-              <div style={{ marginRight: "15px" }}>
-                {this.navItem(
-                  "nav-experience",
-                  "nav-link",
-                  "#experience",
-                  "Experience"
-                )}
-              </div>
-              <div>
-                {this.navItem(
-                  "nav-projects",
-                  "nav-link",
-                  "#projects",
-                  "Projects"
-                )}
-              </div>
-            </Nav>
-          </Navbar.Collapse>
-        </Navbar>
-        <div className="body-content" onClick={this.hideNavIfShown}>
-          <div className="slide-container" style={{ opacity: "1" }}>
-            <WelcomeSlide />
-            <AboutSlide />
-            <ExperienceSlide experience={Experience} />
-            <ProjectSlide projects={Projects} tags={Tags} />
-            <footer className="page-footer font-small">
-              <div
-                className="footer-copyright text-right py-3"
-                style={{ backgroundColor: "#EF4E4E" }}
-              >
-                <p
-                  style={{
-                    paddingBottom: 0,
-                    marginBottom: 0,
-                    paddingRight: "15px",
-                  }}
+      <HelmetProvider>
+        <div className="site-contents area">
+          <Helmet bodyAttributes={{ style: "background-color : #111111" }} />
+          <Navbar
+            className="navbar navbar-default "
+            variant="dark"
+            expand="md"
+            fixed="top"
+            style={{ backgroundColor: "rgba(17,17,17,0.9)" }}
+          >
+            <div className="mobile-nav d-flex justify-content-between">
+              {this.navItem(
+                "nav-home",
+                "navbar-brand",
+                "#welcome",
+                <h1 style={{ marginTop: "auto" }}>DAVID GOLDING</h1>
+              )}
+              <Navbar.Toggle
+                aria-controls="basic-navbar-nav"
+                onClick={this.toggleNav}
+              />
+            </div>
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="ml-auto">
+                <div style={{ marginRight: "15px" }}>
+                  {this.navItem("nav-about", "nav-link", "#about", "About")}
+                </div>
+                <div style={{ marginRight: "15px" }}>
+                  {this.navItem(
+                    "nav-experience",
+                    "nav-link",
+                    "#experience",
+                    "Experience"
+                  )}
+                </div>
+                <div>
+                  {this.navItem(
+                    "nav-projects",
+                    "nav-link",
+                    "#projects",
+                    "Projects"
+                  )}
+                </div>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+          <div className="body-content" onClick={this.hideNavIfShown}>
+            <div className="slide-container" style={{ opacity: "1" }}>
+              <WelcomeSlide />
+              <AboutSlide />
+              <ExperienceSlide experience={Experience} />
+              <ProjectSlide projects={Projects} tags={Tags} />
+              <footer className="page-footer font-small">
+                <div
+                  className="footer-copyright text-right py-3"
+                  style={{ backgroundColor: "#EF4E4E" }}
                 >
-                  © David Golding {new Date().getFullYear()}
-                </p>
-              </div>
-            </footer>
+                  <p
+                    style={{
+                      paddingBottom: 0,
+                      marginBottom: 0,
+                      paddingRight: "15px",
+                    }}
+                  >
+                    © David Golding {new Date().getFullYear()}
+                  </p>
+                </div>
+              </footer>
+            </div>
+          </div>
+          <div
+            style={{
+              height: "100vh",
+              position: "fixed",
+              top: 0,
+              width: "100%",
+            }}
+          >
+            <div className="area">
+              <ul className="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div
-          style={{ height: "100vh", position: "fixed", top: 0, width: "100%" }}
-        >
-          <div className="area">
-            <ul className="circles">
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
-          </div>
-        </div>
-      </div>
+      </HelmetProvider>
     );
   }
 }
