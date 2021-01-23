@@ -1,5 +1,13 @@
 [
   {
+    "head": "TETRIS",
+    "sub": "CS324",
+    "desc": "An implementation of the classic game with multiple levels, a 3 piece lookahead and a persistant highscore over sessions.",
+    "date": "20 Jan 2020",
+    "category": "Uni",
+    "skills": ["TypeScript", "WebGL", "React"]
+  },
+  {
     "head": "Multi-Class Classifier",
     "sub": "CS342",
     "desc": "Created a classifer using PCA and a multi-class percepton for the Iris dataset.",
