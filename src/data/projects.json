@@ -3,7 +3,7 @@
     "head": "TETRIS",
     "sub": "CS324",
     "desc": "An implementation of the classic game with multiple levels, a 3 piece lookahead and a persistant highscore over sessions.",
-    "date": "20 Jan 2020",
+    "date": "20 Jan 2021",
     "category": "Uni",
     "skills": ["TypeScript", "WebGL", "React"]
   },
