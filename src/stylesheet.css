@@ -115,6 +115,11 @@ code {
   margin: 10px;
 }
 
+.list-group-item-action:focus, .list-group-item-action:hover, .list-group-item-action:active {
+  background-color: initial;
+}
+
+
 .col-sm-4 {
   margin: 0;
   padding: 0;
@@ -870,9 +875,12 @@ h2 {
   border-color: #444444;
 }
 
+
+
 .list-group-item-action:hover > .list-group-item-action:focus {
   color: #495057;
-  background-color: rgba(255, 255, 255, 0.6);
+  
+  /* background-color: none; */
 }
 
 @media (max-width: 768px) {

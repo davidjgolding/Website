@@ -1,5 +1,13 @@
 [
   {
+    "head": "Musique",
+    "sub": "Third Year Project",
+    "desc": "An iOS app which learns the most appropriate music to play based on a user's emotion using on-device learning.",
+    "date": "10 May 2021",
+    "category": "Uni",
+    "skills": ["Swift", "Python"]
+  },
+  {
     "head": "TETRIS",
     "sub": "CS324",
     "desc": "An implementation of the classic game with multiple levels, a 3 piece lookahead and a persistant highscore over sessions.",

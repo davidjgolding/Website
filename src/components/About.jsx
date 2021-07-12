@@ -9,9 +9,6 @@ export function makeIcon(img, alt, url, height = 25, className = "") {
 }
 
 export default function AboutSlide(props) {
-  const python = makeIcon("python.png", "Python", "https://www.python.org");
-  const kotlin = makeIcon("kotlin.png", "Kotlin", "https://kotlinlang.org");
-
   return (
     <section id="about" className="about slide">
       <div className="about-inner">
@@ -26,8 +23,8 @@ export default function AboutSlide(props) {
                 <span role="img" aria-label="hand wave">
                   👋
                 </span>
-                , I’m a final year Computer Science student at the University of
-                Warwick.
+                , I graduated from the University of Warwick in July 2021 with a
+                bachelor's degree in Computer Science.
               </p>
               <p>
                 I love building things which help people and ensuring they’re
@@ -35,27 +32,10 @@ export default function AboutSlide(props) {
                 <span role="img" aria-label="secure">
                   🔒
                 </span>
-                . You’ll normally find me playing with Python {python} or Kotlin{" "}
-                {kotlin}.
-              </p>
-              <p>
-                Aside from coding, I'm an extremely competitive table-tennis{" "}
-                <span role="img" aria-label="table tennis">
-                  🏓
-                </span>{" "}
-                and badminton{" "}
-                <span role="img" aria-label="badminton">
-                  🏸
-                </span>{" "}
-                player, however, for more relaxing entertainment I often play
-                the piano{" "}
-                <span role="img" aria-label="piano">
-                  🎹
-                </span>
                 .
               </p>
               <p>
-                I’m always open to new opportunities so please reach out{" "}
+                I am always open to new opportunities so please reach out{" "}
                 <span role="img" aria-label="grin">
                   😁
                 </span>

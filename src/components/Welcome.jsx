@@ -39,7 +39,7 @@ export default class WelcomeSlide extends Component {
           <div style={{ textAlign: "center" }}>
             <img className="welcome-img" src="dg.jpg" alt="David Golding" />
             <h1>David Golding</h1>
-            <h2>University of Warwick</h2>
+            <h2>Software Engineer @ Amazon</h2>
             <div className="show-more-container">
               <div>
                 <AnchorLink offset="53" href={"#about"} className="show-more">
